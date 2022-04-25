@@ -10,5 +10,5 @@ const plugin: Plugin = {
 export default Component
 
 export {
-  plugin as buttonPlugin
+  plugin
 }
