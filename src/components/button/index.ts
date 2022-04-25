@@ -1,4 +1,3 @@
-import { def } from '@vue/shared'
 import { Plugin } from 'vue'
 import { Component } from './Button'
 
