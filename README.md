@@ -27,7 +27,7 @@ app.use(BulmaVue)
 Register individual components globally
 ```typescript
 import { createApp } from 'vue'
-import { buttonPlugin } from 'bulma-vue/components/button'
+import { plugin as buttonPlugin } from 'bulma-vue/components/button'
 import 'bulma/css/bulma.css'
 
 const app = createApp(App)
