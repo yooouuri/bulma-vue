@@ -10,7 +10,7 @@
   "license": "MIT",
   "scripts": {
     "clean": "rimraf dist",
-    "dev": "rollup -c rollup.config.ts -w",
+    "dev": "rollup -c rollup.config.ts -w --configPlugin rollup-plugin-esbuild",
     "build": "yarn clean && rollup -c rollup.config.ts --configPlugin rollup-plugin-esbuild"
   },
   "devDependencies": {
