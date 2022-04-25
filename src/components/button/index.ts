@@ -1,5 +1,5 @@
 import { Plugin } from 'vue'
-import { Component } from './Button'
+import { Component } from './button'
 
 const plugin: Plugin = {
   install(app) {
