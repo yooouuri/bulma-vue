@@ -9,7 +9,7 @@ You need [Vue.js](https://vuejs.org/) **version 3.0+**.
 ### 1 Install via yarn
 
 ```bash
-yarn add bulma-vue bulma
+yarn add bulma-vue
 ```
 
 ### 2 Import and use bulma-vue
@@ -18,7 +18,7 @@ Bundle
 ```typescript
 import { createApp } from 'vue'
 import BulmaVue from 'bulma-vue'
-import 'bulma/css/bulma.css'
+import 'bulma-vue/css/bulma-vue.css'
 
 const app = createApp(App)
 app.use(BulmaVue)
@@ -28,7 +28,7 @@ Register individual components globally
 ```typescript
 import { createApp } from 'vue'
 import { plugin as buttonPlugin } from 'bulma-vue/components/button'
-import 'bulma/css/bulma.css'
+import 'bulma-vue/css/bulma-vue.css'
 
 const app = createApp(App)
 app.use(buttonPlugin)
@@ -38,7 +38,7 @@ Or as individual component
 
 ```typescript
 import { createApp } from 'vue'
-import 'bulma/css/bulma.css'
+import 'bulma-vue/css/bulma-vue.css'
 
 createApp(App)
 ```
