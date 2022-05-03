@@ -24,7 +24,14 @@ export const Component = defineComponent({
     } = toRefs(props)
 
     return function() {
-      const slot = (slots.default().filter(s => s.type !== Comment).length > 1 || grouped.value) ?
+      const slotsWithoutComments = slots.default().filter(s => s.type !== Comment)
+
+      // we need to provide fieldType prop to the slots
+      const customSlots = slotsWithoutComments.map(slot =>
+        [ 'b-select' ].includes(slot.type.name) ? h(slot, { fieldType: type.value }) : h(slot)
+      )
+
+      const slot = (customSlots.length > 1 || grouped.value) ?
         h(
           'div',
           { 
@@ -39,9 +46,9 @@ export const Component = defineComponent({
                 ...slots.default().length > 1 && !grouped.value ? [ 'has-addons' ] : [],
               ]
             },
-            slots.default()
+            customSlots
           )
-        ) : slots.default()
+        ) : customSlots
 
       const defaultSlots = [ slot ];
 
