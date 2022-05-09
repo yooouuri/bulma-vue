@@ -6,8 +6,12 @@ import {
   computed
 } from 'vue'
 
-const buttonProps = {
-  type: String,
+export const props = {
+  type: {
+    type: String,
+    default: 'text',
+    required: false
+  },
   size: String,
   label: String,
   loading: Boolean,
@@ -30,7 +34,7 @@ const buttonProps = {
 export const Component = defineComponent({
   name: 'b-button',
   props: {
-    ...buttonProps
+    ...props
   },
   emits: [ 'click' ],
   setup(props, { emit, slots }) {

@@ -14,7 +14,10 @@
     "dev": "rollup -c rollup.config.ts -w --configPlugin rollup-plugin-esbuild",
     "build": "pnpm run build:js && pnpm run build:css",
     "build:js": "pnpm run clean && rollup -c rollup.config.ts --configPlugin rollup-plugin-esbuild",
-    "build:css": "sass src/scss/bulma-vue.scss dist/bulma-vue.css"
+    "build:css": "sass src/scss/bulma-vue.scss dist/bulma-vue.css",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "devDependencies": {
     "@types/node": "^17.0.26",
@@ -26,6 +29,7 @@
     "rollup-plugin-esbuild": "^4.9.1",
     "sass": "^1.51.0",
     "typescript": "^4.6.3",
+    "vitepress": "^0.22.4",
     "vue": "^3.2.33"
   },
   "peerDependencies": {
