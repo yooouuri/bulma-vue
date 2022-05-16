@@ -13,11 +13,16 @@ const esbuildOptions = {
   minify: true
 }
 
+const external = [
+  'vue',
+  'vue-router'
+]
+
 const component = (name: string) => defineConfig({
   plugins: [
     esbuild(esbuildOptions)
   ],
-  external: ['vue'],
+  external,
   input: `src/components/${name}/index.ts`,
   output: {
     format: 'esm',
@@ -32,7 +37,7 @@ export default defineConfig([
       plugins: [
         esbuild(esbuildOptions)
       ],
-      external: ['vue'],
+      external,
       input: `src/index.ts`,
       output: {
         format: 'esm',

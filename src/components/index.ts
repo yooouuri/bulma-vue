@@ -4,6 +4,7 @@ import BInput from './input'
 import BSelect from './select'
 import BModal from './modal'
 import { BTabs, BTabItem } from './tabs'
+import { BBreadcrumb, BBreadcrumbItem } from './breadcrumb'
 
 export {
   BButton,
@@ -12,5 +13,7 @@ export {
   BSelect,
   BModal,
   BTabs,
-  BTabItem
+  BTabItem,
+  BBreadcrumb,
+  BBreadcrumbItem
 }
