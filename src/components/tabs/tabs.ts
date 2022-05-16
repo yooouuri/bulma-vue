@@ -48,7 +48,7 @@ export const Component = defineComponent({
 
       const tabs = slots.default()
 
-      const tab$ = computed(() => tabs[tabIndex.value]).value
+      const tab$ = h(computed(() => tabs[tabIndex.value]).value)
 
       const tabs$ = tabs.map((t, index) => {
         const tabProps = t.props
@@ -117,7 +117,7 @@ export const Component = defineComponent({
               {
                 class: 'tab-item'
               },
-              h(tab$)
+              tab$
             )
           )
         ]
