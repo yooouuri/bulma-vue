@@ -1,4 +1,12 @@
-import { defineComponent, h, provide, ref, Teleport, toRefs, watch } from 'vue'
+import {
+  defineComponent,
+  h,
+  provide,
+  ref,
+  Teleport,
+  toRefs,
+  watch
+} from 'vue'
 import type { PropType, Component } from 'vue'
 
 export const modal = defineComponent({
@@ -56,7 +64,7 @@ export const modal = defineComponent({
     }
 
     function backdropClickEventListener(event: Event) {
-      if (event.target?.className === 'modal-background') {
+      if ((event.target as Element).className === 'modal-background') {
         emit('close')
         emit('update:modelValue', !modelValue.value)
       }
