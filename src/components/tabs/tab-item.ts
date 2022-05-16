@@ -1,4 +1,4 @@
-import { defineComponent, h } from 'vue'
+import { defineComponent } from 'vue'
 
 export const Component = defineComponent({
   name: 'b-tab-item',
